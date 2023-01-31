@@ -11,5 +11,22 @@
   <img alt="PyPI - License" src="https://img.shields.io/github/license/JacksonBurns/presentable">
 </p>
 
+## Installation
+`presentable` is available on PyPI. Install it with `pip install presentable`.
+
+## Usage
+`presentable` is a drop in replacement from `sklearn.metrics.confusion_matrix` that just includes some nice formatting and only ever prints to the terminal, helpful on remote hardware accessible only from the CLI.
+
+```python
+>>> confusion_matrix(gtr, pred, tabulate_args={"tablefmt":"github","floatfmt":".2f"},sklearn_args={"normalize":"all"})
+| Truth\Model   |   cat |   dog |
+|---------------|-------|-------|
+| cat           |  0.17 |  0.17 |
+| dog           |  0.33 |  0.33 |
+```
+
+`tabulate_args` and `sklearn_args` are optional dictionaries to specify additional configurations arguments for `tabulate` and sklearn's `confusion_matrix`. Check the [`tabulate` documentation](https://github.com/astanin/python-tabulate#table-format) and [`sklearn` documentation](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html) for a list of which args are supported.
+
 ## Online Documentation
 [Click here to read the documentation](https://JacksonBurns.github.io/presentable/)
+
