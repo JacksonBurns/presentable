@@ -26,7 +26,7 @@ cwd = pathlib.Path(__file__).parent
 README = (cwd / "README.md").read_text()
 
 setup(
-    name="test pypi_name",
+    name="presentable",
     version=get_version("presentable/__init__.py"),
     description="Providing a Prettier Confusion Matrix for your Command Line",
     long_description=README,
