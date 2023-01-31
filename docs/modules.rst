@@ -1,10 +1,10 @@
-blank-python-project
+presentable
 ====================
 
 .. toctree::
    :maxdepth: 4
 
-   blankpythonproject
+   presentable
    setup
    start_project
    test

@@ -2,12 +2,12 @@ import os
 import sys
 import unittest
 
-# from blankpythonproject import blankpythonproject
+# from presentable import presentable
 
 
-class Test_blankpythonproject(unittest.TestCase):
+class Test_presentable(unittest.TestCase):
     """
-    Test the various functionalities of blankpythonproject.
+    Test the various functionalities of presentable.
     """
 
     @classmethod
