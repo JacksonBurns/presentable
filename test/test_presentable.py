@@ -4,6 +4,7 @@ import sys
 import unittest
 
 from presentable import confusion_matrix
+from unittest.mock import patch
 
 from .data import reference_strings
 
@@ -31,7 +32,7 @@ class Test_sklearn_docs_example(unittest.TestCase):
         """
         Labels should also work with strings.
         """
-        with unittest.mock.patch("sys.stdout", new=io.StringIO()) as mock_stdout:
+        with patch("sys.stdout", new=io.StringIO()) as mock_stdout:
             confusion_matrix(
                 self.str_test_true,
                 self.str_test_pred,
@@ -45,7 +46,7 @@ class Test_sklearn_docs_example(unittest.TestCase):
         """
         Table with 10 rows/columns.
         """
-        with unittest.mock.patch("sys.stdout", new=io.StringIO()) as mock_stdout:
+        with patch("sys.stdout", new=io.StringIO()) as mock_stdout:
             confusion_matrix(
                 self.large_true,
                 self.large_pred,
@@ -59,7 +60,7 @@ class Test_sklearn_docs_example(unittest.TestCase):
         """
         Example with only two labels.
         """
-        with unittest.mock.patch("sys.stdout", new=io.StringIO()) as mock_stdout:
+        with patch("sys.stdout", new=io.StringIO()) as mock_stdout:
             confusion_matrix(
                 self.small_true,
                 self.small_pred,
@@ -73,7 +74,7 @@ class Test_sklearn_docs_example(unittest.TestCase):
         """
         Reproduce the example from the sklearn docs.
         """
-        with unittest.mock.patch("sys.stdout", new=io.StringIO()) as mock_stdout:
+        with patch("sys.stdout", new=io.StringIO()) as mock_stdout:
             confusion_matrix(
                 self.sklearn_example_true,
                 self.sklearn_example_pred,
@@ -87,7 +88,7 @@ class Test_sklearn_docs_example(unittest.TestCase):
         """
         Reproduce the example from the sklearn docs.
         """
-        with unittest.mock.patch("sys.stdout", new=io.StringIO()) as mock_stdout:
+        with patch("sys.stdout", new=io.StringIO()) as mock_stdout:
             confusion_matrix(
                 self.sklearn_example_true,
                 self.sklearn_example_pred,
@@ -102,7 +103,7 @@ class Test_sklearn_docs_example(unittest.TestCase):
         """
         Reproduce the example from the sklearn docs with custom args to sklearn and tabulate.
         """
-        with unittest.mock.patch("sys.stdout", new=io.StringIO()) as mock_stdout:
+        with patch("sys.stdout", new=io.StringIO()) as mock_stdout:
             confusion_matrix(
                 self.sklearn_example_true,
                 self.sklearn_example_pred,
