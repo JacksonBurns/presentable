@@ -38,4 +38,7 @@ setup(
     install_requires=read("requirements.txt").split("\n"),
     packages=find_packages(),
     include_package_data=True,
+    extras_require={
+        "dev": ["twine", "build"],
+    },
 )
