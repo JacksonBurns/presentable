@@ -4,10 +4,10 @@ test package
 Submodules
 ----------
 
-test.test\_blankpythonproject module
-------------------------------------
+test.test\_presentable module
+-----------------------------
 
-.. automodule:: test.test_blankpythonproject
+.. automodule:: test.test_presentable
    :members:
    :undoc-members:
    :show-inheritance:
